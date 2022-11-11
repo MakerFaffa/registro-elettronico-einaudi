@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --red: rgb(229, 57, 53);
+  --yellow: rgb(251, 192, 45);
+  --green: rgb(67, 160, 71);
+  --purple: rgb(148, 29, 232);
+  --blue: rgb(17, 60, 207);
+  --light-blue: rgb(0, 168, 225);
+  --font-color: rgb(20, 20, 20);
+  --lighter-font-color: rgb(80, 80, 80);
+  --highlight-color: rgb(33, 150, 243);
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, input, select, button, span, a, p {
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0px;
+  text-decoration: none;
+}
+
+li
+{
+    list-style: none;
+}
+
+.header{
+    width: auto;
+    height: 75px;
+
+    background-color: var(--red);
+}
+
+.header nav{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.header nav .logo{
+    padding: 10px 20px;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.header nav .logo p
+{
+    color:white;
+    padding: 20px;
+}
+
+
+.header nav .logo img
+{
+    transition: .5s;
+    transform: scale(1);
+}
+
+.header nav .logo img:hover{
+    transform: scale(1.05);
+}
+
+.header nav .title
+{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header nav .title h1
+{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+}
+
+.header nav .info
+{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.header nav .info p
+{
+    color:white;
+    padding: 20px;
+}
+
+.header nav .info i
+{
+    color:white;
+    padding: 20px;
+}
+
+.header nav .info .account
+{
+    transition: .5s;
+    z-index: 2;
+}
+
+.header nav .info .account-icon
+{
+    position: absolute;
+    right: -70px;
+    font-size: 45px;
+    transition: .5s;
+}
+
+.header nav .info .account-icon p
+{
+    position: absolute;
+    top: 18%;
+    right: 13%;
+    color: var(--red);
+    font-weight: 500;
+}
+
+.header nav .info .account:hover, .header nav .info .account-icon:hover
+{
+    padding-right: 75px;
+}
+
+.header nav .info .account:hover + .account-icon
+{
+    display: block;
+    right: 0;
+}
+
+
+.side-nav
+{
+    width: 80px;
+    height: 100%;
+    background: white;
+    position: fixed;
+    left: 0;
+    padding: 20px 15px;
+    box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.side-nav:hover
+{
+    width: 300px;
+}
+
+.side-nav li a 
+{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.side-nav li
+{
+    transition: .5s;
+}
+
+.side-nav li:hover, .side-nav li .fa-angle-right
+{
+    transform: translate(8%);
+}
+
+.side-nav li:hover a i
+{
+    color: red;
+}
+
+.side-nav li:hover a p
+{
+    color: red;
+}
+
+.side-nav li a i
+{
+    color: black;
+    font-size: 25px;
+    padding: 10px 5px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-nav li a p
+{
+    color: black;
+    font-size: 20px;
+    padding: 10px 5px;
+    text-transform: uppercase;
+    margin-left: 12px;
+}
+
+
+.side-nav li.logo{
+    width: 260px;
+    height: 40px;
+    position: absolute;
+    background-color: transparent;
+    transition: 0.5s;
+    cursor: pointer;
+    left: 7px;
+    top: 12px;
+}
+
+.side-nav li.logo:hover{
+    transform: scale(1);
+}
+
+.side-nav li.logo img
+{
+    width: 100%;
+}
+
+.side-nav li.logo i{
+    color: var(--red);
+    font-size: 30px;
+}
+
+.side-nav span.separator{
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    display: block;
+    margin: 10px 0;
+    border-radius: 1px;
+    transition: 0.5s;
+}
